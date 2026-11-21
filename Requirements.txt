@@ -1,5 +1,0 @@
-streamlit>=1.37
-yfinance>=0.2.54
-pandas
-numpy
-requests
