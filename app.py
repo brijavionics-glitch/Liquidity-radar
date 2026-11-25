@@ -17,58 +17,6 @@ IST = "Asia/Kolkata"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
       "Accept": "*/*"}
 
-# ======================= STYLE =======================
-st.markdown("""
-<style>
-#MainMenu, footer, header [data-testid="stToolbar"]{visibility:hidden}
-.block-container{padding-top:1rem;padding-bottom:3rem}
-html, body{overflow-x:hidden}
-.hero{background:radial-gradient(120% 140% at 0% 0%,#0f2a1c 0%,#071018 55%,#05080d 100%);border:1px solid #1b3a2a;color:#e6edf3;border-radius:14px;padding:14px 16px;margin-bottom:10px}
-.hero h1{font:800 22px system-ui;margin:0;color:#e6edf3;letter-spacing:.3px}
-.hero h1 span{color:#22c55e}
-.hero .s{font-size:12.5px;color:#8b9bb0;margin-top:2px}
-.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
-.pill{font:600 11px ui-monospace,Menlo,monospace;padding:2px 8px;border-radius:6px;background:#0d1622;border:1px solid #1f2d3d;color:#a9b8c9;white-space:nowrap}
-.pill.g{color:#4ade80;border-color:#1f4d33}.pill.r{color:#f87171;border-color:#4d1f1f}.pill.y{color:#fbbf24;border-color:#4d3d1f}
-.warn{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.35);color:#fbbf24;border-radius:10px;padding:8px 10px;font-size:13px;margin:6px 0 10px}
-.cd{background:linear-gradient(180deg,#0b1220,#070b12);border:1px solid #1f2d3d;border-radius:14px;padding:11px 12px 10px;margin:8px 0 2px;color:#e6edf3;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-.r1{display:flex;align-items:center;gap:8px}
-.rk{font:700 11px ui-monospace,Menlo,monospace;color:#22c55e;background:rgba(34,197,94,.12);border-radius:5px;padding:2px 6px}
-.sy{font:800 16px system-ui;letter-spacing:.3px;flex:1;min-width:0;overflow-wrap:anywhere;color:#f1f5f9}
-.px{font:600 12.5px ui-monospace,Menlo,monospace;text-align:right;white-space:nowrap;color:#e6edf3}
-.sc{font:800 15px ui-monospace,Menlo,monospace;border-radius:7px;padding:3px 7px;min-width:38px;text-align:center}
-.sc.hi{background:#22c55e;color:#03140a;box-shadow:0 0 10px rgba(34,197,94,.45)}.sc.md{background:#eab308;color:#1a1300}.sc.lo{background:#ef4444;color:#fff}
-.r2{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;color:#8b9bb0;margin-top:3px;flex-wrap:wrap}
-.lvl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:8px}
-.lvl div{background:#0f1a2a;border:1px solid #1a2a3d;border-radius:7px;padding:4px 6px}
-.lvl s{display:block;text-decoration:none;font:700 9.5px ui-monospace,Menlo,monospace;color:#7d8ba1;letter-spacing:.6px}
-.lvl b{display:block;font:700 clamp(11px,3.2vw,14px) ui-monospace,Menlo,monospace;color:#e6edf3;white-space:nowrap}
-.lvl em{font:600 9.5px ui-monospace,Menlo,monospace;font-style:normal;color:#7d8ba1}
-.lvl .e b{color:#60a5fa}.lvl .x b{color:#f87171}.lvl .t b{color:#4ade80}
-.mk{display:flex;align-items:center;gap:8px;margin-top:8px;font:600 11px ui-monospace,Menlo,monospace;color:#a9b8c9;white-space:nowrap}
-.mk .bar{flex:1;height:6px;background:#1a2433;border-radius:3px;overflow:hidden}
-.mk .bar i{display:block;height:100%;background:linear-gradient(90deg,#15803d,#4ade80);box-shadow:0 0 8px #22c55e}
-.tx{font-size:12px;color:#c3cfdc;margin-top:7px;line-height:1.4}
-.ch{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
-.ch span{font:600 10.5px ui-monospace,Menlo,monospace;padding:2px 6px;border-radius:5px;background:rgba(34,197,94,.1);color:#86efac;border:1px solid rgba(34,197,94,.25)}
-.ch span.p{background:rgba(96,165,250,.1);color:#93c5fd;border-color:rgba(96,165,250,.3)}
-.ch span.m{background:transparent;color:#64748b;border-color:#1f2d3d}
-.ev{margin-top:7px;font-size:11.5px;color:#fbbf24;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.3);border-radius:7px;padding:4px 8px}
-.nw{margin-top:7px;font-size:11.5px;color:#a9b8c9;border-left:2px solid #3b82f6;padding-left:7px}
-.hz{border-top:1px dashed #1f2d3d;margin-top:9px;padding-top:8px}
-.hzt{display:flex;align-items:center;gap:8px;font:700 12px ui-monospace,Menlo,monospace;color:#a9b8c9}
-.vd{font:800 11px ui-monospace,Menlo,monospace;padding:2px 8px;border-radius:5px;letter-spacing:.5px}
-.vd.hi{background:#22c55e;color:#03140a}.vd.md{background:#eab308;color:#1a1300}.vd.av{background:#ef4444;color:#fff}
-.why{font-size:11.5px;color:#a9b8c9;margin-top:5px}
-.ck{display:flex;justify-content:space-between;gap:8px;font-size:12px;padding:3px 0;border-bottom:1px solid rgba(127,127,127,.15)}
-.ck b{white-space:nowrap;font-family:ui-monospace,Menlo,monospace}
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;background:#64748b}
-.dot.g{background:#22c55e}.dot.r{background:#ef4444}
-.up{color:#4ade80}.dn{color:#f87171}
-.none{color:#8b9bb0;font-size:13px;padding:8px 0}
-</style>
-""", unsafe_allow_html=True)
-
 # ======================= UNIVERSE =======================
 FALLBACK = """RELIANCE,Energy;HDFCBANK,Bank;ICICIBANK,Bank;INFY,IT;TCS,IT;SBIN,Bank;BHARTIARTL,Telecom;ITC,FMCG;LT,Infra;
 AXISBANK,Bank;KOTAKBANK,Bank;HINDUNILVR,FMCG;BAJFINANCE,Finance;BAJAJFINSV,Finance;MARUTI,Auto;M&M,Auto;SUNPHARMA,Pharma;
@@ -917,50 +865,70 @@ def phase():
 import altair as alt
 from concurrent.futures import ThreadPoolExecutor
 
-SHORT = dict(hist="Past hit rate", fund="Company health", inst="FII-DII", mkt="Nifty trend", deliv="Delivery", deal="Big deal", liq="Liquidity",
-             vol="Volume", trend="MA trend", e200="Above 200DMA", macd="MACD", rsi="RSI", adx="ADX", st="Supertrend",
-             brk="Breakout", sq="Squeeze", obv="OBV", rs="Beats Nifty", w52="52W high", stretch="Not stretched",
-             cd="Daily candle", cw="Weekly candle", hhhl="HH-HL", acc="Accumulation", news="News", sector="Sector",
-             mood="Global", vwap="VWAP", orb="ORB", e5="5m trend", ivol="Vol today", rng="Day range", gap="Gap",
-             flow="Buy flow", c5="5m candle")
-HZ_LABEL = {"today": "Today", "week": "1 week", "month": "1 month"}
-PALETTE = ["#e11d48", "#0ea5e9", "#22c55e", "#14b8a6", "#6366f1", "#f59e0b", "#a855f7", "#ef4444", "#0891b2", "#65a30d"]
+SHORT = dict(hist="Past hit rate", fund="Company health", inst="FII-DII flow", mkt="Nifty trend", deliv="Delivery", deal="Big deal",
+             liq="Liquidity", vol="Volume", trend="Moving average trend", e200="Above 200 day average", macd="MACD", rsi="RSI",
+             adx="ADX", st="Supertrend", brk="Breakout", sq="Squeeze", obv="OBV", rs="Beats Nifty", w52="Near 52 week high",
+             stretch="Not stretched", cd="Daily candle", cw="Weekly candle", hhhl="Higher highs", acc="Accumulation", news="News",
+             sector="Sector", mood="World markets", vwap="VWAP", orb="Opening breakout", e5="5 minute trend", ivol="Volume today",
+             rng="Day range", gap="Gap", flow="Buy money", c5="5 minute candle")
+PERIODS = {"Today": ("today", "#ff9500", "Same day, exit by 3:15 PM"), "1 Week": ("week", "#007aff", "Hold up to 5 trading days"),
+           "1 Month": ("month", "#af52de", "Hold up to 4 weeks"), "Common": ("common", "#34c759", "Strong in more than one period")}
+HZ_NAME = {"today": "Today", "week": "1 Week", "month": "1 Month"}
+HZ_COL = {"today": "#ff9500", "week": "#007aff", "month": "#af52de"}
 
 st.markdown("""
 <style>
-.wl-h{font:600 13px system-ui;color:#7d8ba1;margin:16px 0 2px;letter-spacing:.3px}
-.wrow{display:flex;align-items:center;gap:11px;padding:10px 6px;border-bottom:1px solid #141c27;border-radius:8px}
-.wrow.on{background:#111b2a}
-.lg{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 11px system-ui;color:#fff;flex:none;letter-spacing:.2px}
-.mid{flex:1;min-width:0}
-.l1,.l2{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.s1{font:700 17px system-ui;color:#f1f5f9;white-space:nowrap}
-.s1 i{font:800 10.5px ui-monospace,Menlo,monospace;font-style:normal;background:#22c55e;color:#03140a;border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:2px}
-.s1 i.m{background:#eab308;color:#1a1300}
-.pr{font:600 17px ui-monospace,Menlo,monospace;color:#f1f5f9;white-space:nowrap}
-.l2{font-size:13px;color:#7d8ba1;margin-top:1px}
-.nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
-.cg{white-space:nowrap;font-family:ui-monospace,Menlo,monospace}
-.l3{display:flex;flex-wrap:wrap;gap:4px 10px;font:600 11.5px ui-monospace,Menlo,monospace;color:#7d8ba1;margin-top:4px}
-.l3 b{font-weight:700}.l3 em{font-style:normal;font-size:10.5px;opacity:.85}.l3 .e{color:#60a5fa}.l3 .x{color:#f87171}.l3 .t{color:#4ade80}
-.rg{display:flex;justify-content:space-between;align-items:baseline;font:600 12px ui-monospace,Menlo,monospace;color:#7d8ba1;margin:2px 2px -4px}
-.lgd{display:flex;flex-wrap:wrap;gap:4px 12px;font:600 11.5px ui-monospace,Menlo,monospace;color:#7d8ba1;margin:2px 2px 6px}
-.lgd b{font-weight:700}
-.tg{font:700 10px ui-monospace,Menlo,monospace;color:#93c5fd;border:1px solid #1e3a5f;border-radius:4px;padding:0 4px;margin-left:4px}
-div[class*="st-key-r_"]{position:relative;gap:0}
-div[class*="st-key-r_"] .stButton{position:absolute;inset:0;z-index:3;margin:0}
-div[class*="st-key-r_"] .stButton button{width:100%;height:100%;opacity:0;border:0;padding:0;min-height:0}
-.cp{text-align:center;padding:6px 0 2px}
-.cp .lgb{width:60px;height:60px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 15px system-ui;color:#fff}
-.cp .n1{font:700 17px system-ui;color:#f1f5f9;margin-top:6px}
-.cp .n2{font:600 12px system-ui;color:#7d8ba1}
-.cp .p1{font:800 34px ui-monospace,Menlo,monospace;color:#f1f5f9;margin-top:4px}
-.cp .p1 small{font:600 13px system-ui;color:#7d8ba1;margin-left:4px}
-.cp .p2{font:700 15px ui-monospace,Menlo,monospace}
-.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
-.st3 div{font:700 15px ui-monospace,Menlo,monospace;color:#e6edf3}
-.st3 span{display:block;font:600 10.5px system-ui;color:#7d8ba1;letter-spacing:.5px}
-.vrow{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 12.5px ui-monospace,Menlo,monospace;color:#a9b8c9;padding:6px 0;border-bottom:1px solid #141c27}
+:root{--bg:#f2f2f7;--card:#ffffff;--ink:#1c1c1e;--sub:#8e8e93;--soft:#f5f5f8;--g:#34c759;--r:#ff3b30;--o:#ff9500;--b:#007aff}
+html,body,.stApp{background:var(--bg) !important;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+#MainMenu,footer{visibility:hidden}
+.block-container{padding-top:1.4rem;padding-bottom:3rem;max-width:720px}
+.big{font:800 34px -apple-system,BlinkMacSystemFont,system-ui;letter-spacing:-.6px;margin:0;color:var(--ink)}
+.date{color:var(--sub);font:600 13px system-ui;text-transform:uppercase;letter-spacing:.3px;margin:2px 0 6px}
+.card{background:var(--card);border-radius:18px;padding:14px 16px;margin:10px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.ct{display:flex;align-items:center;justify-content:space-between;gap:8px;font:600 16px system-ui}
+.ct .m{color:var(--sub);font:500 13px system-ui}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px;margin-top:10px}
+.tile span{display:block;color:var(--sub);font:500 12px system-ui}
+.tile b{display:block;font:700 19px system-ui;color:var(--ink)}
+.tile i{font-style:normal;font:600 12px system-ui}
+.g{color:var(--g) !important}.r{color:var(--r) !important}.o{color:var(--o) !important}.s{color:var(--sub) !important}
+.note{background:#fff4e5;color:#8a5300;border-radius:14px;padding:10px 14px;font:500 14px system-ui;margin:8px 0}
+.sh{display:flex;align-items:center;gap:8px;color:var(--r);font:700 18px system-ui;margin:18px 2px 6px}
+.shs{color:var(--sub);font:500 13px system-ui;margin:-2px 2px 8px}
+div[data-testid="stSelectbox"] div[data-baseweb="select"]>div{border:2px solid var(--r) !important;border-radius:14px !important;background:#fff !important;min-height:52px;box-shadow:0 2px 10px rgba(255,59,48,.12)}
+.sec{display:flex;align-items:center;justify-content:space-between;margin:18px 2px 4px}
+.sec .t{font:700 20px system-ui}.sec .m{color:var(--sub);font:500 13px system-ui}
+div[class*="st-key-pk_"],div[class*="st-key-sr_"]{background:#fff;border-radius:18px;padding:14px 16px 10px;box-shadow:0 1px 2px rgba(0,0,0,.04);gap:6px}
+div[class*="st-key-pk_"] .stButton button,div[class*="st-key-sr_"] .stButton button{width:100%;border:0;border-radius:12px;background:var(--soft);color:var(--b);font-weight:600;min-height:40px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.sym{font:700 20px system-ui;color:var(--ink)}
+.nm{color:var(--sub);font:500 13px system-ui;margin-top:1px}
+.px{font:700 20px system-ui;text-align:right;white-space:nowrap;color:var(--ink)}
+.pc{font:600 13px system-ui;text-align:right;white-space:nowrap}
+.badge{display:inline-block;font:700 12px system-ui;border-radius:8px;padding:2px 7px;margin-left:6px;vertical-align:3px;color:#fff}
+.lv4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+@media(max-width:480px){.lv4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.lv4 div{background:var(--soft);border-radius:12px;padding:8px 10px}
+.lv4 span{display:block;color:var(--sub);font:600 11.5px system-ui}
+.lv4 b{display:block;font:700 17px system-ui;color:var(--ink);white-space:nowrap}
+.lv4 i{font-style:normal;font:700 12.5px system-ui}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 10px;color:var(--sub);font:500 13px system-ui;margin-top:10px}
+.foot b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chips span{font:600 11.5px system-ui;border-radius:8px;padding:3px 8px;background:#e8f8ed;color:#1f7a3a}
+.pill{display:inline-block;font:700 12px system-ui;border-radius:999px;padding:3px 10px;color:#fff;margin-left:6px}
+.BUY{background:var(--g)}.WAIT{background:var(--o)}.AVOID{background:var(--r)}
+.hzb{border-top:1px solid #ececf0;margin-top:12px;padding-top:10px}
+.hzt{display:flex;justify-content:space-between;align-items:center;font:700 16px system-ui}
+.hzt .m{color:var(--sub);font:500 12.5px system-ui}
+.why{color:#3a3a3c;font:500 13px system-ui;margin-top:8px}
+.none{background:#fff;border-radius:18px;padding:16px;color:var(--sub);font:500 14px system-ui;margin:8px 0}
+.rg{display:flex;justify-content:space-between;font:600 13px system-ui;color:var(--sub);margin:6px 2px -2px}
+.ck{display:flex;justify-content:space-between;gap:8px;font:500 13px system-ui;padding:5px 0;border-bottom:1px solid #f0f0f3;color:#3a3a3c}
+.ck b{white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;background:#c7c7cc}
+.dot.g{background:var(--g)}.dot.r{background:var(--r)}
+div[data-testid="stExpander"]{background:#fff;border-radius:14px;border:0}
 </style>
 """, unsafe_allow_html=True)
 
@@ -973,18 +941,13 @@ def rs(x):
     return f"{x:,.2f}"
 
 
-def logo(sym):
-    c = PALETTE[sum(map(ord, sym)) % len(PALETTE)]
-    return c, esc(sym.replace("-", "")[:3])
+def pc(x):
+    return f"{x:+.1f}%"
 
 
 def markers(chk, hz):
     rows = sorted(((v * W[hz][k], k, v, note) for k, (v, note) in chk.items() if W[hz].get(k, 0) > 0), reverse=True)
     return rows, [r for r in rows if r[2] > .2]
-
-
-def news_factor_safe(sym, ctx):
-    return news_factor(sym, ctx["news"])
 
 
 @st.cache_data(ttl=600, show_spinner=False)
@@ -993,16 +956,16 @@ def scan(uni):
     parts = get_daily(tuple(s + ".NS" for s, _ in universe))
     cues, nifty = get_cues()
     feats = []
-    for s, sec in universe:
+    for s_, sec in universe:
         d = None
         for part in parts:
-            d = sub(part, s + ".NS")
+            d = sub(part, s_ + ".NS")
             if d is not None:
                 break
         if d is None:
             continue
         try:
-            f = daily_features(s, sec, d, nifty)
+            f = daily_features(s_, sec, d, nifty)
             if f:
                 feats.append(f)
         except Exception:
@@ -1013,9 +976,9 @@ def scan(uni):
 def fetch_funds(syms):
     out = {}
     with ThreadPoolExecutor(max_workers=8) as ex:
-        for s, r in zip(syms, ex.map(get_fund, syms)):
+        for s_, r in zip(syms, ex.map(get_fund, syms)):
             if r:
-                out[s] = r
+                out[s_] = r
     return out
 
 
@@ -1025,67 +988,61 @@ def ok_plan(p, hz):
 
 
 def verdicts(f, intr, ctx, sec_df, live_mkt, need):
-    """BUY / WAIT / AVOID with levels for all 3 periods."""
+    """BUY / WAIT / AVOID for all 3 periods, always with prices."""
     live_now = live_mkt and intr is not None and intr["day"] == now_ist().date()
+    price = intr["ltp"] if intr else f["c"]
+    a = f["atr"]
     res = {}
     for hz in ("today", "week", "month"):
         ctx["sector_rank"] = (sec_df["r1"] if hz == "today" else sec_df["r5"]).rank(pct=True).to_dict()
         sc, chk, flags = score(f, hz, ctx, intr if (hz == "today" and live_now) else None)
         rows, hit = markers(chk, hz)
-        hard = any(w.startswith(("Bad news", "Low liquidity", "Below 200", "Company is making")) for w in flags)
+        hard = any(w.startswith(("Bad news", "Low liquidity", "Below 200", "Company is making", "Serious news", "Profit fell")) for w in flags)
         miss = [SHORT[k] for _, k, v, _ in rows if v < -.05][:3]
         pb = plan(f, hz, intr, live_now)
         if not flags and sc >= need and not pb["blocked"] and pb["p1"] < (.3 if hz == "today" else .35):
-            flags = flags + [f"Target 1 reached only {pb['p1'] * 100:.0f}% of the time before"]
+            flags = flags + [f"Target 1 was reached only {pb['p1'] * 100:.0f}% of the time before"]
+        down = None
         if not flags and sc >= need and not pb["blocked"]:
-            vd, p, why = "BUY", pb, "Strong: " + ", ".join(SHORT[k] for _, k, _, _ in hit[:4])
+            vd, p, why = "BUY", pb, "Strong on: " + ", ".join(SHORT[k] for _, k, _, _ in hit[:4])
         elif not flags and sc >= need and pb["blocked"]:
-            vd, p, why = "WAIT", plan(f, hz, intr, live_now, trigger=pb["r1"] * 1.003), f"Resistance at ₹{rs(pb['r1'])} blocks the target"
+            vd, p, why = "WAIT", plan(f, hz, intr, live_now, trigger=pb["r1"] * 1.003), f"Price is just under a resistance at ₹{rs(pb['r1'])}."
         elif sc >= 50 and not hard:
             base = (intr["hi"] if intr else f["h"]) if hz == "today" else max(f["hi20"], f["h"]) if hz == "week" else max(f["hi55"], f["h"])
             vd, p = "WAIT", plan(f, hz, intr, live_now, trigger=base * 1.002)
-            why = "Waiting on: " + (flags[0] if flags else ", ".join(miss) or "higher score")
+            why = "Holding back because: " + (flags[0] if flags else ", ".join(miss) or "score is not high enough")
         else:
-            vd, p, why = "AVOID", None, "Weak: " + (flags[0] if flags else ", ".join(miss) or "most markers")
-        price = intr["ltp"] if intr else f["c"]
-        a = f["atr"]
-        if sc >= 60 and not hard:
-            out = ("Likely UP", "up", "")
-        elif sc >= 45 and not hard:
-            out = ("SIDEWAYS", "nt", f"Range ₹{rs(price - {'today': .5, 'week': 1.2, 'month': 2.5}[hz] * a)} to ₹{rs(price + {'today': .5, 'week': 1.2, 'month': 2.5}[hz] * a)}")
-        else:
+            vd, p = "AVOID", None
+            why = "Weak because: " + (flags[0] if flags else ", ".join(miss) or "most markers")
             m = {"today": .75, "week": 1.5, "month": 3}[hz]
             sup = f["l"] if hz == "today" else f["lo10"] if hz == "week" else f["lo20"]
-            out = ("Likely DOWN", "dn", f"May fall to ₹{rs(tick(min(price - m * a, sup)))}. If you hold it, keep a stop at ₹{rs(tick(price + .5 * a))} or exit.")
-        res[hz] = dict(vd=vd, sc=sc, p=p, why=why, hit=len(hit), n=len(rows), chk=chk, flags=flags, out=out)
+            fall = tick(min(price - m * a, sup))
+            hold = tick(price - {"today": .5, "week": 1.0, "month": 1.8}[hz] * a)
+            down = dict(fall=fall, fp=(fall / price - 1) * 100, hold=hold, hp=(hold / price - 1) * 100)
+        if sc >= 60 and not hard:
+            out = ("Likely to go up", "g")
+        elif sc >= 45 and not hard:
+            out = ("Likely to stay flat", "o")
+        else:
+            out = ("Likely to go down", "r")
+        res[hz] = dict(vd=vd, sc=sc, p=p, why=why, hit=len(hit), n=len(rows), chk=chk, flags=flags, out=out, down=down, price=price)
     return res
 
 
-def lvl_line(p):
-    return (f'<div class="l3"><span>Buy <b class="e">{rs(p["e"])}</b></span>'
-            f'<span>Stop <b class="x">{rs(p["sl"])}</b> <em class="x">-{p["rp"]:.1f}%</em></span>'
-            f'<span>T1 <b class="t">{rs(p["t1"])}</b> <em class="t">+{p["g1"]:.1f}%</em></span>'
-            f'<span>T2 <b class="t">{rs(p["t2"])}</b> <em class="t">+{p["g2"]:.1f}%</em></span>'
-            f'<span>T1 chance <b class="{"t" if p["p1"] >= .5 else "e" if p["p1"] >= .38 else "x"}">{p["p1"] * 100:.0f}%</b></span></div>')
+def levels(p, price):
+    gap = (p["e"] / price - 1) * 100
+    buy_note = "at today's price" if abs(gap) < .15 else f"{pc(gap)} from now"
+    return (f'<div class="lv4">'
+            f'<div><span>Buy at</span><b>₹{rs(p["e"])}</b><i class="s">{buy_note}</i></div>'
+            f'<div><span>Target 1</span><b class="g">₹{rs(p["t1"])}</b><i class="g">{pc(p["g1"])}</i></div>'
+            f'<div><span>Target 2</span><b class="g">₹{rs(p["t2"])}</b><i class="g">{pc(p["g2"])}</i></div>'
+            f'<div><span>Stop loss</span><b class="r">₹{rs(p["sl"])}</b><i class="r">-{p["rp"]:.1f}%</i></div></div>')
 
 
-def row(key, sym, name, price, chg, sc, p, sel, tags=""):
-    c, ini = logo(sym)
-    lv = lvl_line(p) if p else ""
-    html = (f'<div class="wrow{" on" if sel else ""}"><div class="lg" style="background:{c}">{ini}</div><div class="mid">'
-            f'<div class="l1"><span class="s1">{esc(sym)}<i class="{"" if sc >= 70 else "m"}">{sc / 10:.1f}</i>{tags}</span><span class="pr">{rs(price)}</span></div>'
-            f'<div class="l2"><span class="nm">{esc(name)}</span><span class="cg {"up" if chg >= 0 else "dn"}">{price * chg / (100 + chg):+.2f} {chg:+.2f}%</span></div>'
-            f'{lv}</div></div>')
-    try:
-        box = st.container(key=f"r_{key}")
-    except TypeError:
-        box = st.container()
-    with box:
-        st.markdown(html, unsafe_allow_html=True)
-        st.button(f"Open {sym}", key=f"b_{key}",
-                  on_click=lambda: st.session_state.update(sel=None if st.session_state.get("sel_key") == key else sym,
-                                                           sel_key=None if st.session_state.get("sel_key") == key else key,
-                                                           sel_hz=key.split("_")[0]))
+def down_levels(d):
+    return (f'<div class="lv4">'
+            f'<div><span>May fall to</span><b class="r">₹{rs(d["fall"])}</b><i class="r">{pc(d["fp"])}</i></div>'
+            f'<div><span>If you hold, sell below</span><b>₹{rs(d["hold"])}</b><i class="s">{pc(d["hp"])}</i></div></div>')
 
 
 def chart_data(f, intr_df, tf):
@@ -1102,168 +1059,105 @@ def chart_data(f, intr_df, tf):
         t = d.index.tz_localize(None) if d.index.tz is not None else d.index
     df = pd.DataFrame({"t": t, "o": d["Open"].values, "h": d["High"].values, "l": d["Low"].values, "c": d["Close"].values})
     df["i"] = range(len(df))
-    df["ts"] = df["t"].dt.strftime("%d %b %H:%M" if tf in ("1D", "1W") else "%d %b %Y")
+    df["ts"] = df["t"].dt.strftime("%d %b %I:%M %p" if tf in ("1D", "1W") else "%d %b %Y")
     return df
 
 
-def chart(sym, f, intr_df, tf, p, style, height):
+def chart(f, intr_df, tf, p, style, height=260):
     df = chart_data(f, intr_df, tf)
     if df.empty:
         st.caption("No chart data for this range.")
         return
     up = df["c"].iloc[-1] >= df["c"].iloc[0]
-    col = "#00b386" if up else "#eb5b3c"          # Groww-like green / red
+    col = "#34c759" if up else "#ff3b30"
     chg = (df["c"].iloc[-1] / df["c"].iloc[0] - 1) * 100
     st.markdown(f'<div class="rg"><span>{df["ts"].iloc[0]} to {df["ts"].iloc[-1]}</span>'
-                f'<span class="{"up" if up else "dn"}">{chg:+.2f}% in {tf}</span></div>', unsafe_allow_html=True)
-    lv = pd.DataFrame([("Buy", p["e"], "#60a5fa"), ("Stop", p["sl"], "#f87171"), ("T1", p["t1"], "#4ade80"), ("T2", p["t2"], "#4ade80")],
+                f'<span class="{"g" if up else "r"}">{pc(chg)} in {tf}</span></div>', unsafe_allow_html=True)
+    lv = pd.DataFrame([("Buy", p["e"], "#007aff"), ("Stop", p["sl"], "#ff3b30"), ("T1", p["t1"], "#34c759"), ("T2", p["t2"], "#34c759")],
                       columns=["n", "y", "col"]) if p else pd.DataFrame({"n": [], "y": [], "col": []})
     lo = min(df["l"].min() if style == "Candles" else df["c"].min(), lv["y"].min() if len(lv) else 1e18)
     hi = max(df["h"].max() if style == "Candles" else df["c"].max(), lv["y"].max() if len(lv) else -1e18)
-    pad = (hi - lo) * .05 or hi * .01
+    pad = (hi - lo) * .06 or hi * .01
     dom = [lo - pad, hi + pad]
+    sc_ = alt.Scale(domain=dom, zero=False, nice=False)
     x = alt.X("i:Q", axis=None, scale=alt.Scale(domain=[0, max(len(df) - 1, 1)], nice=False))
-    yax = alt.Axis(title=None, orient="right", labelColor="#6b7a90", gridColor="rgba(148,163,184,.08)", domain=False,
-                   ticks=False, tickCount=5, labelFontSize=11)
-    y = alt.Y("c:Q", scale=alt.Scale(domain=dom, zero=False, nice=False), axis=yax)
+    yax = alt.Axis(title=None, orient="right", labelColor="#8e8e93", gridColor="#f0f0f3", domain=False, ticks=False, tickCount=5, labelFontSize=11)
+    y = alt.Y("c:Q", scale=sc_, axis=yax)
     base = alt.Chart(df)
     layers = []
     if style == "Candles":
-        ycol = alt.condition("datum.c >= datum.o", alt.value("#00b386"), alt.value("#eb5b3c"))
-        layers.append(base.mark_rule(strokeWidth=1).encode(x=x, y=alt.Y("l:Q", scale=alt.Scale(domain=dom, zero=False, nice=False), axis=yax),
-                                                             y2="h:Q", color=ycol))
+        ycol = alt.condition("datum.c >= datum.o", alt.value("#34c759"), alt.value("#ff3b30"))
+        layers.append(base.mark_rule(strokeWidth=1).encode(x=x, y=alt.Y("l:Q", scale=sc_, axis=yax), y2="h:Q", color=ycol))
         bw = max(2, min(9, int(300 / max(len(df), 1))))
-        layers.append(base.mark_bar(size=bw).encode(x=x, y=alt.Y("o:Q", scale=alt.Scale(domain=dom, zero=False, nice=False)), y2="c:Q", color=ycol))
+        layers.append(base.mark_bar(size=bw).encode(x=x, y=alt.Y("o:Q", scale=sc_), y2="c:Q", color=ycol))
     else:
         grad = alt.Gradient(gradient="linear", x1=1, x2=1, y1=1, y2=0,
-                            stops=[alt.GradientStop(color="rgba(0,0,0,0)", offset=0), alt.GradientStop(color=col, offset=1)])
-        layers.append(base.mark_area(color=grad, opacity=.28, interpolate="monotone", clip=True).encode(x=x, y=y, y2=alt.datum(dom[0])))
-        layers.append(base.mark_line(color=col, strokeWidth=2.2, interpolate="monotone").encode(x=x, y=y))
+                            stops=[alt.GradientStop(color="rgba(255,255,255,0)", offset=0), alt.GradientStop(color=col, offset=1)])
+        layers.append(base.mark_area(color=grad, opacity=.22, interpolate="monotone", clip=True).encode(x=x, y=y, y2=alt.datum(dom[0])))
+        layers.append(base.mark_line(color=col, strokeWidth=2.4, interpolate="monotone").encode(x=x, y=y))
     if len(lv):
-        layers.append(alt.Chart(lv).mark_rule(strokeDash=[5, 4], strokeWidth=1.1, opacity=.9).encode(y="y:Q", color=alt.Color("col:N", scale=None)))
-        layers.append(alt.Chart(lv).mark_text(align="left", dx=3, dy=-6, fontSize=10.5, fontWeight="bold").encode(
+        layers.append(alt.Chart(lv).mark_rule(strokeDash=[5, 4], strokeWidth=1.2).encode(y="y:Q", color=alt.Color("col:N", scale=None)))
+        layers.append(alt.Chart(lv).mark_text(align="left", dx=3, dy=-7, fontSize=11, fontWeight="bold").encode(
             y="y:Q", x=alt.value(2), text="n:N", color=alt.Color("col:N", scale=None)))
     hover = alt.selection_point(nearest=True, on="mouseover", fields=["i"], empty=False, clear="mouseout")
-    layers.append(base.mark_rule(color="#94a3b8", strokeDash=[3, 3], strokeWidth=1).encode(
-        x=x, opacity=alt.condition(hover, alt.value(.8), alt.value(0)),
+    layers.append(base.mark_rule(color="#c7c7cc", strokeWidth=1).encode(
+        x=x, opacity=alt.condition(hover, alt.value(1), alt.value(0)),
         tooltip=[alt.Tooltip("ts:N", title="Time"), alt.Tooltip("o:Q", title="Open", format=",.2f"), alt.Tooltip("h:Q", title="High", format=",.2f"),
                  alt.Tooltip("l:Q", title="Low", format=",.2f"), alt.Tooltip("c:Q", title="Close", format=",.2f")]).add_params(hover))
-    layers.append(base.mark_circle(size=55, color=col, stroke="#05080d", strokeWidth=1.5).encode(
+    layers.append(base.mark_circle(size=60, color=col, stroke="#fff", strokeWidth=2).encode(
         x=x, y=y, opacity=alt.condition(hover, alt.value(1), alt.value(0))))
-    ch = alt.layer(*layers).properties(height=height).configure_view(strokeWidth=0).configure(background="transparent")
-    st.altair_chart(ch, use_container_width=True)
-    if p:
-        st.markdown(f'<div class="lgd"><span style="color:#60a5fa">Buy <b>{rs(p["e"])}</b></span><span style="color:#f87171">Stop <b>{rs(p["sl"])}</b></span>'
-                    f'<span style="color:#4ade80">T1 <b>{rs(p["t1"])}</b></span><span style="color:#4ade80">T2 <b>{rs(p["t2"])}</b></span></div>',
-                    unsafe_allow_html=True)
+    st.altair_chart(alt.layer(*layers).properties(height=height).configure_view(strokeWidth=0).configure(background="transparent"),
+                    use_container_width=True)
 
 
-def panel(sym, name, f, intr, intr_df, res, sel_hz, height=280):
-    c, ini = logo(sym)
-    price = intr["ltp"] if intr else f["c"]
-    prev = intr["prev"] if intr else f["prev"]
-    chg = (price / prev - 1) * 100
-    top = st.columns([5, 1])
-    with top[1]:
-        st.button("Close", key=f"close_{sym}", on_click=lambda: st.session_state.update(sel=None, sel_key=None))
-    st.markdown(f'<div class="cp"><div class="lgb" style="background:{c}">{ini}</div><div class="n1">{esc(name)}</div>'
-                f'<div class="n2">{esc(sym)} · NSE · {esc(f["sec"])}</div><div class="p1">{rs(price)}<small>INR</small></div>'
-                f'<div class="p2 {"up" if chg >= 0 else "dn"}">{price - prev:+,.2f} {chg:+.2f}% today</div></div>', unsafe_allow_html=True)
+def chart_block(key, f, intr_df, p):
     c1, c2 = st.columns([3, 2])
-    tf = c1.radio("Chart range", ["1D", "1W", "1M", "6M", "1Y"], index=2, horizontal=True, label_visibility="collapsed", key=f"tf_{sym}")
-    style = c2.radio("Chart type", ["Line", "Candles"], index=0, horizontal=True, label_visibility="collapsed", key=f"cs_{sym}")
-    hz = sel_hz if sel_hz in res else "week"
-    chart(sym, f, intr_df, tf, res[hz]["p"], style, height)
-    st.markdown(f'<div class="st3"><div><span>PREV CLOSE</span>{rs(prev)}</div><div><span>OPEN</span>{rs(intr["open"] if intr else f["o"])}</div>'
-                f'<div><span>DAY HIGH / LOW</span>{rs(intr["hi"] if intr else f["h"])}<br>{rs(intr["lo"] if intr else f["l"])}</div></div>',
-                unsafe_allow_html=True)
-    html = ""
-    for k in ("today", "week", "month"):
-        r = res[k]
-        cls = "hi" if r["vd"] == "BUY" else "md" if r["vd"] == "WAIT" else "av"
-        lv = lvl_line(r["p"]) if r["p"] else ""
-        o = r["out"]
-        html += (f'<div class="vrow"><span>{HZ_LABEL[k]} <span class="vd {cls}">{r["vd"]}</span> <b class="{o[1]}">{o[0]}</b></span>'
-                 f'<span>{r["sc"] / 10:.1f}/10 · {r["hit"]}/{r["n"]} markers</span></div>{lv}'
-                 + (f'<div class="why {o[1]}">{esc(o[2])}</div>' if o[2] else "") + f'<div class="why">{esc(r["why"])}</div>')
-    st.markdown(html, unsafe_allow_html=True)
-    with st.expander("All markers"):
-        for k in ("today", "week", "month"):
-            rows, _ = markers(res[k]["chk"], k)
-            st.markdown(f"**{HZ_LABEL[k]}**")
-            st.markdown("".join(
-                f'<div class="ck"><span><span class="dot {"g" if v > .2 else "r" if v < -.05 else ""}"></span>{esc(NAMES[kk])}: {esc(note)}</span>'
-                f'<b class="{"up" if cc > .05 else "dn" if cc < -.05 else ""}">{cc:+.1f}</b></div>' for cc, kk, v, note in rows)
-                + "".join(f'<div class="ck"><span>Red flag: {esc(x)}</span></div>' for x in res[k]["flags"]), unsafe_allow_html=True)
+    tf = c1.radio("Range", ["1D", "1W", "1M", "6M", "1Y"], index=2, horizontal=True, label_visibility="collapsed", key=f"tf_{key}")
+    style = c2.radio("Type", ["Line", "Candles"], horizontal=True, label_visibility="collapsed", key=f"cs_{key}")
+    chart(f, intr_df, tf, p, style)
 
 
-# ---------- header and search ----------
-st.markdown('<div class="hero"><h1>Liquidity <span>Radar</span></h1><div class="s">Top 5 buys for today, 1 week and 1 month. Tap a stock for its chart. Updates every 10 minutes.</div></div>', unsafe_allow_html=True)
-st.session_state.setdefault("sel", None)
-st.session_state.setdefault("sel_hz", "week")
+def all_markers(res):
+    for hz in ("today", "week", "month"):
+        rows, _ = markers(res[hz]["chk"], hz)
+        st.markdown(f"**{HZ_NAME[hz]}**")
+        st.markdown("".join(
+            f'<div class="ck"><span><span class="dot {"g" if v > .2 else "r" if v < -.05 else ""}"></span>{esc(NAMES[k])}: {esc(note)}</span>'
+            f'<b class="{"g" if c > .05 else "r" if c < -.05 else "s"}">{c:+.1f}</b></div>' for c, k, v, note in rows)
+            + "".join(f'<div class="ck"><span class="r">Red flag: {esc(x)}</span></div>' for x in res[hz]["flags"]), unsafe_allow_html=True)
 
-all_syms = get_all_symbols()
-names = dict(all_syms)
-labels = [f"{a} · {b}" for a, b in all_syms]
-lab2sym = {l: a for l, (a, _) in zip(labels, all_syms)}
 
-
+# ---------- settings (shown at the bottom, read first) ----------
+main = st.container()
 with st.expander("Settings"):
-    uni = st.selectbox("Stocks to scan", ["Nifty 100", "Nifty 200", "Nifty 500"], index=2,
-                       help="Nifty 500 includes mid and small companies, so more lower-priced shares")
+    uni = st.selectbox("Shares to scan", ["Nifty 100", "Nifty 200", "Nifty 500"], index=2,
+                       help="Nifty 500 includes mid and small companies, so more lower priced shares")
     max_price = {"Any price": 1e12, "Under ₹2,000": 2000, "Under ₹1,000": 1000, "Under ₹500": 500, "Under ₹200": 200}[
         st.selectbox("Share price", ["Any price", "Under ₹2,000", "Under ₹1,000", "Under ₹500", "Under ₹200"], index=0)]
-    fii_manual = st.number_input("FII net buying in crore (used only if NSE data does not load)", value=0.0, step=100.0)
-    wide = st.toggle("Big screen: chart on the right side", value=False, help="Turn on for tablet or laptop")
-    min_score = int(round(st.slider("Show only stocks scoring at least (out of 10)", 5.5, 8.0, 6.2, 0.1) * 10))
+    fii_manual = st.number_input("FII net buying in crore (only if NSE data does not load)", value=0.0, step=100.0)
+    min_score = int(round(st.slider("Show only shares scoring at least (out of 10)", 5.5, 8.0, 6.2, 0.1) * 10))
+
+st.session_state.setdefault("open", None)
+all_syms = get_all_symbols()
+names = dict(all_syms)
+labels = [f"{a_} · {b_}" for a_, b_ in all_syms]
+lab2sym = {l: a_ for l, (a_, _) in zip(labels, all_syms)}
 
 
-def on_search():
-    v = st.session_state.get("q")
-    if v and v in lab2sym:
-        st.session_state.update(sel=lab2sym[v], sel_hz="week", sel_key="search")
-
-
-def search_box():
-    st.markdown('<div class="wl-h">CHECK ANY SHARE</div>', unsafe_allow_html=True)
-    kw = dict(index=None, placeholder="Search any stock: type PG, KPIT, Tata...", label_visibility="collapsed", key="q", on_change=on_search)
-    try:
-        picked = st.selectbox("Search", labels, accept_new_options=True, **kw)
-    except TypeError:
-        picked = st.selectbox("Search", labels, **kw)
-    if picked and picked not in lab2sym:
-        typed = picked.strip().upper().replace(".NS", "")
-        if typed in names:
-            st.session_state.update(sel=typed, sel_key="search", sel_hz="week")
-        else:
-            import difflib
-            pool = {a: l for l, a in lab2sym.items()}
-            near = difflib.get_close_matches(typed.replace(" ", ""), list(pool), n=4, cutoff=.5)
-            by_name = {b.upper(): a for a, b in all_syms}
-            near += [by_name[n] for n in difflib.get_close_matches(typed, list(by_name), n=4, cutoff=.45) if by_name[n] not in near]
-            if near:
-                st.markdown(f'<div class="warn">No stock called "{esc(picked)}". Did you mean:</div>', unsafe_allow_html=True)
-                cols = st.columns(2)
-                for i, a in enumerate(near[:6]):
-                    cols[i % 2].button(pool[a][:40], key=f"dym{i}", use_container_width=True,
-                                       on_click=lambda l=pool[a], a=a: st.session_state.update(q=l, sel=a, sel_hz="week", sel_key="search"))
-            else:
-                st.markdown(f'<div class="warn">No stock found for "{esc(picked)}". Try the company name or NSE symbol.</div>', unsafe_allow_html=True)
-
-
-
-st.markdown("<style>.block-container{max-width:%s !important}</style>" % ("1300px" if wide else "720px"), unsafe_allow_html=True)
+def toggle(key):
+    st.session_state.open = None if st.session_state.get("open") == key else key
 
 
 @st.fragment(run_every=600)
 def live():
     ph, conf, live_mkt = phase()
-    with st.spinner("Scanning stocks. First load can take 2 to 3 minutes."):
+    st.markdown(f'<div class="date">{now_ist():%A, %d %b} · {ph}</div><h1 class="big">Markets</h1>', unsafe_allow_html=True)
+    with st.spinner("Scanning shares. The first load can take 2 to 3 minutes."):
         feats, cues, nifty, src = scan(uni)
         news, news_ok = get_news()
         events = get_events()
         flows = get_fii_dii()
-        deliv, deliv_day = get_delivery()
+        deliv, _ = get_delivery()
         ban = get_ban()
         deals = get_deals()
     if not feats:
@@ -1273,7 +1167,7 @@ def live():
     sec_df = pd.DataFrame([(f["sec"], f["r5"], f["r1"]) for f in feats], columns=["sec", "r5", "r1"]).groupby("sec").mean()
     mood = market_mood(cues)
     if flows is None and fii_manual:
-        flows = (fii_manual, 0.0, "typed in Settings")
+        flows = (fii_manual, 0.0, "Settings")
     mkt_trend = 0
     if nifty is not None and len(nifty) > 60:
         e20n, e50n = ema(nifty, 20).iloc[-1], ema(nifty, 50).iloc[-1]
@@ -1282,35 +1176,35 @@ def live():
     heavy_sell = bool(flows and flows[0] < -3000 and flows[0] + (flows[1] or 0) < 0)
     need = min_score + (6 if mood <= -6 else 0) + (5 if heavy_sell else 0) + (4 if mkt_trend < 0 else 0)
 
-    # status pills
-    nifty_chg = cues.get("Nifty")
-    pills = [(ph, "g" if live_mkt else ""), (f"Updated {now_ist():%I:%M %p}", ""), (f"{len(feats)} scanned", "")]
-    if nifty_chg is not None:
-        pills.append((f"Nifty {nifty_chg:+.2f}%", "g" if nifty_chg >= 0 else "r"))
-    if flows:
-        pills.append((f"FII {flows[0]:+,.0f} cr", "g" if flows[0] >= 0 else "r"))
-        pills.append((f"DII {flows[1]:+,.0f} cr", "g" if flows[1] >= 0 else "r"))
-    pills.append(({1: "Nifty uptrend", -1: "Nifty downtrend", 0: "Nifty sideways"}[mkt_trend], {1: "g", -1: "r", 0: "y"}[mkt_trend]))
-    pills.append((f"Global {'good' if mood > 5 else 'weak' if mood < -5 else 'mixed'}", "g" if mood > 5 else "r" if mood < -5 else "y"))
-    st.markdown('<div class="pills" style="margin:0 0 6px">' + "".join(f'<span class="pill {c}">{esc(t)}</span>' for t, c in pills) + "</div>",
-                unsafe_allow_html=True)
+    # ---- market card ----
+    nc = cues.get("Nifty")
+    vix = cues.get("India VIX")
+    fii, dii = (flows[0], flows[1] or 0) if flows else (None, None)
+    tile = lambda label, val, sub_, cls: f'<div class="tile"><span>{label}</span><b class="{cls}">{val}</b><i class="s">{sub_}</i></div>'
+    tiles = [tile("Nifty", "-" if nc is None else pc(nc), "last close", "g" if (nc or 0) >= 0 else "r"),
+             tile("Market trend", {1: "Up", -1: "Down", 0: "Flat"}[mkt_trend], "Nifty 20 and 50 day", {1: "g", -1: "r", 0: "o"}[mkt_trend]),
+             tile("World markets", "Good" if mood > 5 else "Weak" if mood < -5 else "Mixed", "US, Asia, crude", "g" if mood > 5 else "r" if mood < -5 else "o"),
+             tile("FII", "-" if fii is None else f"{'+' if fii >= 0 else '-'}₹{abs(fii):,.0f} cr", "foreign funds", "g" if (fii or 0) >= 0 else "r"),
+             tile("DII", "-" if dii is None else f"{'+' if dii >= 0 else '-'}₹{abs(dii):,.0f} cr", "Indian funds", "g" if (dii or 0) >= 0 else "r"),
+             tile("India VIX", "-" if vix is None else f"{vix:.1f}", "fear level", "r" if (vix or 0) > 16 else "g")]
+    st.markdown(f'<div class="card"><div class="ct"><span style="color:#007aff">Market today</span>'
+                f'<span class="m">Updated {now_ist():%I:%M %p}</span></div><div class="tiles">{"".join(tiles)}</div></div>', unsafe_allow_html=True)
     if heavy_sell:
-        st.markdown(f'<div class="warn">FIIs sold ₹{-flows[0]:,.0f} crore and DIIs did not cover it. The bar is raised to {need / 10:.1f}. Use smaller quantity.</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="note">Foreign funds sold ₹{-fii:,.0f} crore and Indian funds did not cover it. Only stronger setups are shown. Use smaller quantity.</div>', unsafe_allow_html=True)
     elif mkt_trend < 0 or mood <= -6:
-        st.markdown(f'<div class="warn">Market is weak. Only stronger setups ({need / 10:.1f}+) are shown.</div>', unsafe_allow_html=True)
-    search_box()
-    left, right = st.columns([1, 1.25], gap="large") if wide else (None, None)
+        st.markdown('<div class="note">The market is weak. Only stronger setups are shown.</div>', unsafe_allow_html=True)
 
-    # ---- stage 1: technical scores, liquidity and price filter ----
+    # ---- stage 1 and 2: rank shares ----
     pool = [f for f in feats if f["liq"] >= 20 and f["c"] <= max_price]
     ctx["sector_rank"] = sec_df["r5"].rank(pct=True).to_dict()
     pre = sorted(((score(f, "week", ctx)[0], f) for f in pool), key=lambda x: -x[0])
     intr_pool = [f for _, f in pre[:40]]
     d5 = get_intraday(tuple(f["s"] + ".NS" for f in intr_pool)) if intr_pool else None
-    intr_map = {}
+    intr_map, d5_map = {}, {}
     for f in intr_pool:
         x = sub(d5, f["s"] + ".NS")
         if x is not None:
+            d5_map[f["s"]] = x
             try:
                 intr_map[f["s"]] = intraday_features(x)
             except Exception:
@@ -1324,123 +1218,170 @@ def live():
             intr = intr_map.get(f["s"])
             sc, chk, flags = score(f, hz, ctx, intr if (hz == "today" and live_now) else None)
             if not flags and sc >= need - 6:
-                out.append((sc, f))
+                out.append((sc, f, chk))
         return sorted(out, key=lambda x: -x[0])
 
-    # ---- stage 2: add company health (P/E, ROE, growth) for the best candidates, then rank again ----
     first = {hz: rank(hz, intr_pool if hz == "today" else pool)[:25] for hz in ("today", "week", "month")}
-    cand = sorted({f["s"] for lst in first.values() for _, f in lst})
+    cand = sorted({f["s"] for lst in first.values() for _, f, _ in lst})
     ctx["fund"] = fetch_funds(cand)
     with ThreadPoolExecutor(max_workers=4) as ex:
         ctx["serious"] = {s_: r for s_, r in zip(cand, ex.map(get_stock_news, cand)) if r}
     final = {}
     for hz in ("today", "week", "month"):
-        final[hz] = [(sc, f) for sc, f in rank(hz, [f for _, f in first[hz]]) if sc >= need
+        final[hz] = [(sc, f, chk) for sc, f, chk in rank(hz, [f for _, f, _ in first[hz]]) if sc >= need
                      and ok_plan(plan(f, hz, intr_map.get(f["s"]), live_now and hz == "today"), hz)]
 
-    # ---- chart panel for a tapped or searched share ----
-    def open_panel(sel, sel_hz, height):
-        f = fmap.get(sel)
+    def full(sym):
+        """Everything needed for a share's detail: features, intraday, verdicts."""
+        f = fmap.get(sym)
+        dd = get_daily((sym + ".NS",))
+        dsym = sub(dd[0], sym + ".NS") if dd else None
+        if f is None and dsym is not None:
+            f = daily_features(sym, "Other", dsym, nifty)
         if f is None:
-            dd = get_daily((sel + ".NS",))
-            d = sub(dd[0], sel + ".NS") if dd else None
-            f = daily_features(sel, "Other", d, nifty) if d is not None else None
-        if f is None:
-            st.markdown(f'<div class="warn">Not enough price data for {esc(sel)}.</div>', unsafe_allow_html=True)
-            return
-        if sel not in ctx["fund"]:
-            ctx["fund"][sel] = get_fund(sel)
-        if sel not in ctx.setdefault("serious", {}):
-            sn = get_stock_news(sel)
+            return None
+        f = dict(f, _daily=dsym)
+        if sym not in ctx["fund"]:
+            ctx["fund"][sym] = get_fund(sym)
+        if sym not in ctx["serious"]:
+            sn = get_stock_news(sym)
             if sn:
-                ctx["serious"][sel] = sn
-        d5s = sub(get_intraday((sel + ".NS",)), sel + ".NS")
+                ctx["serious"][sym] = sn
+        x = d5_map.get(sym)
+        if x is None:
+            x = sub(get_intraday((sym + ".NS",)), sym + ".NS")
         intr = None
-        if d5s is not None:
+        if x is not None:
             try:
-                intr = intraday_features(d5s)
+                intr = intraday_features(x)
             except Exception:
                 intr = None
-        dd = get_daily((sel + ".NS",))
-        f = dict(f, _daily=sub(dd[0], sel + ".NS") if dd else None)
-        res = verdicts(f, intr, ctx, sec_df, live_mkt, need)
-        with st.container(border=True):
-            panel(sel, names.get(sel, sel), f, intr, d5s, res, sel_hz, height)
+        return f, x, intr, verdicts(f, intr, ctx, sec_df, live_mkt, need)
 
-    sel, sel_key = st.session_state.get("sel"), st.session_state.get("sel_key")
-    if sel and (sel_key in (None, "search") or wide):
-        target = right if wide else st.container()
-        with target:
-            open_panel(sel, st.session_state.get("sel_hz"), 340 if wide else 280)
+    # ---- search ----
+    st.markdown('<div class="sh"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff3b30" stroke-width="2.6" '
+                'stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Search a share</div>'
+                '<div class="shs">Type a few letters of the name. Pick it from the list to see its targets and chart.</div>', unsafe_allow_html=True)
+    kw = dict(index=None, placeholder="Type here, for example Tata, PG, KPIT", label_visibility="collapsed", key="q")
+    try:
+        picked = st.selectbox("Search a share", labels, accept_new_options=True, **kw)
+    except TypeError:
+        picked = st.selectbox("Search a share", labels, **kw)
+    ssym = None
+    if picked:
+        if picked in lab2sym:
+            ssym = lab2sym[picked]
+        elif picked.strip().upper().replace(".NS", "") in names:
+            ssym = picked.strip().upper().replace(".NS", "")
+        else:
+            import difflib
+            pool_ = {a_: l for l, a_ in lab2sym.items()}
+            typed = picked.strip().upper()
+            near = difflib.get_close_matches(typed.replace(" ", ""), list(pool_), n=4, cutoff=.5)
+            by_name = {b_.upper(): a_ for a_, b_ in all_syms}
+            near += [by_name[n] for n in difflib.get_close_matches(typed, list(by_name), n=4, cutoff=.45) if by_name[n] not in near]
+            if near:
+                st.markdown(f'<div class="note">No share called "{esc(picked)}". Did you mean one of these?</div>', unsafe_allow_html=True)
+                cols = st.columns(2)
+                for i, a_ in enumerate(near[:6]):
+                    cols[i % 2].button(pool_[a_][:40], key=f"dym{i}", use_container_width=True,
+                                       on_click=lambda l=pool_[a_]: st.session_state.update(q=l))
+            else:
+                st.markdown(f'<div class="note">No share found for "{esc(picked)}". Try the company name.</div>', unsafe_allow_html=True)
+    if ssym:
+        data = full(ssym)
+        if data is None:
+            st.markdown(f'<div class="note">Not enough price history for {esc(ssym)}.</div>', unsafe_allow_html=True)
+        else:
+            f, x, intr, res = data
+            price, prev = (intr["ltp"], intr["prev"]) if intr else (f["c"], f["prev"])
+            chg = (price / prev - 1) * 100
+            with st.container(key=f"sr_{ssym}"):
+                blocks = ""
+                for hz in ("today", "week", "month"):
+                    r = res[hz]
+                    lv = levels(r["p"], price) if r["p"] else down_levels(r["down"])
+                    blocks += (f'<div class="hzb"><div class="hzt"><span style="color:{HZ_COL[hz]}">{HZ_NAME[hz]}<span class="pill {r["vd"]}">{r["vd"]}</span></span>'
+                               f'<span class="m">{r["sc"] / 10:.1f}/10 · {r["hit"]} of {r["n"]} markers</span></div>'
+                               f'<div class="why"><b class="{r["out"][1]}">{r["out"][0]}.</b> {esc(r["why"])}</div>{lv}'
+                               + (f'<div class="foot"><span>Chance to reach Target 1: <b>{r["p"]["p1"] * 100:.0f}%</b></span>'
+                                  f'<span>{PERIODS[HZ_NAME[hz]][2]}</span></div>' if r["p"] else "") + '</div>')
+                st.markdown(f'<div class="top"><div><div class="sym">{esc(ssym)}</div><div class="nm">{esc(names.get(ssym, ssym))} · {esc(f["sec"])}</div></div>'
+                            f'<div><div class="px">₹{rs(price)}</div><div class="pc {"g" if chg >= 0 else "r"}">{price - prev:+,.2f} ({pc(chg)}) today</div></div></div>'
+                            f'{blocks}', unsafe_allow_html=True)
+                best = next((res[h]["p"] for h in ("week", "today", "month") if res[h]["p"]), None)
+                chart_block(f"s_{ssym}", f, x, best)
+                with st.expander("See all markers"):
+                    all_markers(res)
 
-    # ---- watchlists ----
-    lst = left if wide else st.container()
-    lst.caption("Live picks, refreshed every 10 minutes." if live_now else "Market closed. Picks are for the next session.")
-    with lst:
-        lists = {}
-        for hz in ("today", "week", "month"):
-            st.markdown(f'<div class="wl-h">{HZ_LABEL[hz].upper()} · TOP 5</div>', unsafe_allow_html=True)
-            top = final[hz][:5]
-            lists[hz] = {f["s"]: sc for sc, f in final[hz][:15]}
-            if not top:
-                st.markdown('<div class="none">No stock passes every buy check right now.</div>', unsafe_allow_html=True)
-                continue
-            for sc, f in top:
-                intr = intr_map.get(f["s"])
-                use_live = hz == "today" and live_now
-                price = intr["ltp"] if (hz == "today" and intr) else f["c"]
-                prev = intr["prev"] if (hz == "today" and intr) else f["prev"]
-                p = plan(f, hz, intr, use_live)
-                key = f"{hz}_{f['s']}"
-                row(key, f["s"], names.get(f["s"], f["s"]), price, (price / prev - 1) * 100, sc, p, sel_key == key)
-                if not wide and sel_key == key:
-                    open_panel(f["s"], hz, 280)
+    # ---- picks ----
+    try:
+        per = st.segmented_control("Period", list(PERIODS), default="Today", key="per", label_visibility="collapsed")
+    except AttributeError:
+        per = st.radio("Period", list(PERIODS), horizontal=True, key="per", label_visibility="collapsed")
+    per = per or "Today"
+    hz_key, col, sub_ = PERIODS[per]
+    st.markdown(f'<div class="sec"><span class="t" style="color:{col}">{"Top 5 for " + per if per != "Common" else "Common picks"}</span>'
+                f'<span class="m">{sub_}</span></div>', unsafe_allow_html=True)
+    if hz_key == "today":
+        st.caption("Live picks, refreshed every 10 minutes." if live_now else "Market closed. These picks are for the next session.")
 
-        # ---- common picks ----
-        st.markdown('<div class="wl-h">COMMON PICKS · STRONG IN MORE THAN ONE PERIOD</div>', unsafe_allow_html=True)
-        common = {}
-        for hz, d in lists.items():
+    if hz_key == "common":
+        tops = {hz: {f["s"]: sc for sc, f, _ in final[hz][:15]} for hz in ("today", "week", "month")}
+        cm = {}
+        for hz, d in tops.items():
             for s_, sc in d.items():
-                common.setdefault(s_, {})[hz] = sc
-        common = sorted(((len(v), sum(v.values()) / len(v), s_, v) for s_, v in common.items() if len(v) >= 2), reverse=True)[:5]
-        if not common:
-            st.markdown('<div class="none">No stock is strong in two periods at once right now.</div>', unsafe_allow_html=True)
-        for cnt, avg, s_, v in common:
-            f = fmap[s_]
-            tags = "".join(f'<span class="tg">{ {"today": "1D", "week": "1W", "month": "1M"}[h] }</span>' for h in ("today", "week", "month") if h in v)
-            main_hz = "week" if "week" in v else "month" if "month" in v else "today"
-            p = plan(f, main_hz, intr_map.get(s_), live_now and main_hz == "today")
-            key = f"common_{s_}"
-            row(key, s_, names.get(s_, s_), f["c"], (f["c"] / f["prev"] - 1) * 100, int(round(avg)), p, sel_key == key, tags)
-            if not wide and sel_key == key:
-                open_panel(s_, main_hz, 280)
+                cm.setdefault(s_, {})[hz] = sc
+        items = sorted(((len(v), sum(v.values()) / len(v), s_, v) for s_, v in cm.items() if len(v) >= 2), reverse=True)[:5]
+        cards = [(int(round(avg)), fmap[s_], "week" if "week" in v else "month" if "month" in v else "today",
+                  " · ".join(HZ_NAME[h] for h in ("today", "week", "month") if h in v)) for _, avg, s_, v in items]
+    else:
+        cards = [(sc, f, hz_key, None) for sc, f, _ in final[hz_key][:5]]
+    if not cards:
+        st.markdown('<div class="none">No share passes every buy check right now. Not buying is also a good decision.</div>', unsafe_allow_html=True)
 
-    st.caption(f"Stock list: {src}. Prices from Yahoo Finance, can be a few minutes late. Company data from Yahoo Finance.")
+    for i, (sc, f, hz, tag) in enumerate(cards, 1):
+        intr = intr_map.get(f["s"])
+        use_live = hz == "today" and live_now
+        price, prev = (intr["ltp"], intr["prev"]) if (intr and hz == "today") else (f["c"], f["prev"])
+        chg = (price / prev - 1) * 100
+        p = plan(f, hz, intr, use_live)
+        key = f"{per}_{f['s']}"
+        _, hit = markers(score(f, hz, ctx, intr if use_live else None)[1], hz)
+        chips = "".join(f"<span>{esc(SHORT[k])}</span>" for _, k, _, _ in hit[:6])
+        bcol = "#34c759" if sc >= 70 else "#ff9500"
+        with st.container(key=f"pk_{key}"):
+            st.markdown(
+                f'<div class="top"><div><div class="sym">{i}. {esc(f["s"])}<span class="badge" style="background:{bcol}">{sc / 10:.1f}/10</span></div>'
+                f'<div class="nm">{esc(names.get(f["s"], f["s"]))}{" · " + tag if tag else ""}</div></div>'
+                f'<div><div class="px">₹{rs(price)}</div><div class="pc {"g" if chg >= 0 else "r"}">{pc(chg)} today</div></div></div>'
+                f'{levels(p, price)}'
+                f'<div class="foot"><span>Chance to reach Target 1: <b>{p["p1"] * 100:.0f}%</b></span><span>{PERIODS[HZ_NAME[hz]][2] if not tag else "Levels for " + HZ_NAME[hz]}</span></div>'
+                f'<div class="why">{esc(p["how"])} Sell half at Target 1, then move the stop loss to your buy price.</div>'
+                f'<div class="chips">{chips}</div>', unsafe_allow_html=True)
+            is_open = st.session_state.get("open") == key
+            st.button("Hide chart" if is_open else "Show chart", key=f"b_{key}", on_click=toggle, args=(key,))
+            if is_open:
+                data = full(f["s"])
+                if data:
+                    f2, x2, _, res2 = data
+                    chart_block(key, f2, x2, p)
+                    with st.expander("See all markers"):
+                        all_markers(res2)
+
+    st.caption(f"Share list: {src}. Prices from Yahoo Finance, can be a few minutes late.")
 
 
-live()
+with main:
+    live()
 
-with st.expander("How stocks are picked"):
+with st.expander("How shares are picked"):
     st.markdown("""
-**Step 1.** Only shares with high liquidity are kept: at least ₹20 crore traded every day.
-
-**Step 2.** Every share is scored out of 10 on these markers:
-1. Moving average trend, and price above the 200 day average.
-2. MACD (Moving Average Convergence Divergence), RSI (Relative Strength Index), ADX (Average Directional Index) and Supertrend.
-3. Breakouts, Bollinger squeeze and 52 week high.
-4. Volume, OBV (On Balance Volume), delivery percentage and accumulation.
-5. Over 30 candle patterns on daily, weekly and 5 minute charts.
-6. Strength vs Nifty and sector strength.
-7. NSE news, bulk and block deals, and upcoming results.
-8. FII (Foreign Institutional Investors) and DII (Domestic Institutional Investors) money flow, Nifty trend and world markets.
-9. Today only: VWAP (Volume Weighted Average Price), opening range breakout, 5 minute trend and buy vs sell money.
-
-**Step 3.** The best 25 for each period are checked for company health: P/E (Price to Earnings), ROE (Return on Equity), profit growth and debt. This counts most for 1 month.
-
-**Step 4.** Shares with a red flag are removed: bearish candle, bad news, results too close, F&O ban, big seller deal, loss-making company (1 month), or RSI above 80.
-
-**Common picks** are shares in the top 15 of at least two periods.
-
-**Prices:** stop loss uses ATR (Average True Range), the share's normal daily move. Targets are 1.5x and 2.5x the risk (2x and 3x for 1 month). Share price does not affect the score, so cheap and costly shares are treated the same.
+1. Only shares with high liquidity: at least ₹20 crore traded every day.
+2. Each share gets a score out of 10 from chart trend, momentum, volume, delivery, over 30 candle patterns, strength vs Nifty, sector, news, company health (P/E, ROE, profit growth) and big deals.
+3. Shares with a red flag are removed: bearish candle, bad or serious news, results too close, profit falling sharply, F&O ban, or too hot (RSI above 80).
+4. Targets come from how far the share normally moves in that time, and never go past the next resistance or 52 week high.
+5. Chance to reach Target 1 is how often this share actually reached that target before the stop loss in the past year.
+6. Market mood (Nifty trend, FII, DII, world markets) raises or lowers the bar for all shares.
 """)
-st.caption("Screening tool only. No method can promise a share will go up. Always use the stop loss. Not financial advice.")
+st.caption("Screening help only. No method can promise a share will go up. Always use the stop loss. Not financial advice.")
